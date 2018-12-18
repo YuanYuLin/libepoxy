@@ -1,0 +1,16 @@
+prefix={{SDKSTAGE}}
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/libepoxy
+
+epoxy_has_glx=0
+epoxy_has_egl=1
+epoxy_has_wgl=0
+
+Name: epoxy
+Description: epoxy GL dispatch Library
+Version: 1.5.2
+Cflags: -I${includedir}
+Libs: -L${libdir} -lepoxy
+Libs.private: -ldl
+Requires.private:  egl
